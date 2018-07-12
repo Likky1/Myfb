@@ -1,0 +1,128 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Переключатель</title>
+        <style>
+        body{
+        	background-image: url("{% static 'css/55.jpg' %}");
+        	background-position: center center;
+        	background-repeat:no-repeat;
+        	background-attachment:fixed;
+        	background-size:cover;
+        	background-color:#556633;
+        }
+        
+        
+        label {
+            width: 100px;
+            height: 96px;
+            display: block;
+            position: relative;
+        }
+        #ch1
+        input[type="checkbox"] + span {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            height: 100%;
+            background: url("{% static 'css/2.jpg' %}") no-repeat;
+            cursor: pointer;
+            opacity:1;
+        }
+
+        #ch1 input[type="checkbox"]:checked + span {
+            background-position: 0 -96px; 
+        }
+
+        #ch2 input[type="checkbox"] + span {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            height: 100%;
+            background: url("{% static 'css/1.jpg' %}") no-repeat;
+            cursor: pointer;
+            opacity:1;
+        }
+
+        #ch2 input[type="checkbox"]:checked + span {
+            background-position: 0 -96px; 
+        }
+        
+        #ch3 input[type="checkbox"] + span {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            height: 100%;
+            background: url("{% static 'css/21.jpg' %}") no-repeat;
+            cursor: pointer;
+            opacity:1;
+        }
+
+        #ch3 input[type="checkbox"]:checked + span {
+            background-position: 0 -96px; 
+        }
+        
+        #ch4 input[type="checkbox"] + span {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            height: 100%;
+            background: url("{% static 'css/3.jpg' %}") no-repeat;
+            cursor: pointer;
+            opacity:1;
+        }
+
+        #ch4 input[type="checkbox"]:checked + span {
+            background-position: 0 -96px; 
+        }
+        
+        input[type="checkbox"] + span {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            height: 100%;
+            background: url("{% static 'css/1.jpg' %}") no-repeat;
+            cursor: pointer;
+            opacity:1;
+        }
+
+        input[type="checkbox"]:checked + span {
+            background-position: 0 -96px; 
+        }
+        
+         table{position:static; border:none:}
+        .t{
+        	opacity:0.5;
+        	background: #000000;}
+        #vid{position:relative; left:300px; border:5px}
+        
+        </style>
+    </head>
+    <body> 
+    <form>
+    <table cellspacing="0" cellpadding="0">
+    <tr>
+    	<th><label id="ch1"><input type="checkbox" value="1" name="k"><span></span></label></th>
+    	<th class="t"></th>
+    	<th><label id="ch2"><input type="checkbox" value="1" name="k"><span></span></label></th>
+    	<th class="t"></th>
+    	<th><label id="ch3"><input type="checkbox" value="1" name="k"><span></span></label></th>
+    </tr> 
+    <tr>
+    	<th class="t"></th>
+    	<th><label id="ch4"><input type="checkbox" value="1" name="k"><span></span></label></th>
+    	<th class="t"></th>
+    	<th><label><input type="checkbox" value="1" name="k"><span></span></label></th>
+    	<th class="t"></th></tr>
+    <tr><th colspan="5"><input type="submit" value="искать"></th></tr>
+	</table>
+        </form>
+     <video id="vid" poster="p.jpg" Width="640" height="360" preload controls loop>
+     <source src="{% static 'css/2.mp4' %}" type='video/mp4; codecs="avc1, mp4a.40.2"' />
+     <source src="{% static 'css/1.webm' %}" type='video/webm; codecs="vp8,vorbis"' />
+     <p>жесть</p>
+     </video>
+     </body>
+</html>
